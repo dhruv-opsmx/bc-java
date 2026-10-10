@@ -154,7 +154,7 @@ public class Blake2bpDigest
         root.setAsLastNode();
         S[PARALLELISM_DEGREE-1].setAsLastNode();
 
-        if(key != null)
+        if(key != null && keyLength > 0)
         {
             byte[] block = new byte[BLAKE2B_BLOCKBYTES];
             System.arraycopy(key, 0, block, 0, keyLength);
